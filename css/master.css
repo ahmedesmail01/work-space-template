@@ -627,7 +627,7 @@ ul {
   width: 100px;
   position: absolute;
   top: -50px;
-  right: -50px;
+  right: 0px;
   border-radius: 50%;
   border: 10px solid #ececec;
 }
@@ -811,13 +811,52 @@ ul {
   text-decoration: none;
   color: var(--mainColor);
 }
-.services {
-}
-.services {
-}
-.services {
-}
 /* end services */
+/* start our-skills */
+.our-skills {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+.our-skills .skills {
+  flex: 1;
+}
+.our-skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.our-skills .skill h3 span {
+  font-size: 12px;
+  color: var(--mainColor);
+  border: 1px solid black;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.our-skills .the-progress {
+  background-color: #ececec;
+  height: 30px;
+  position: relative;
+}
+.our-skills .the-progress span {
+  height: 100%;
+  background-color: var(--mainColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 991px) {
+  .our-skills img {
+    display: none;
+  }
+}
+/* end our-skills */
 /* start animation */
 @keyframes right-move {
   50% {
