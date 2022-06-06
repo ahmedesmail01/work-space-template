@@ -1,6 +1,7 @@
 :root {
   --mainColor: #2196f3;
   --mainColor-alt: #1787e0;
+  --mainShadow: 0 0 10px #ddd;
 }
 * {
   box-sizing: border-box;
@@ -727,6 +728,96 @@ ul {
   color: #777;
 }
 /* end teams */
+/* start services */
+.services {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  background-color: #ececec;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.services .box {
+  background-color: white;
+  position: relative;
+  counter-increment: services;
+  transition: 0.2s;
+  box-shadow: var(--mainShadow);
+}
+.services .box::before {
+  position: absolute;
+  content: "";
+  background-color: var(--mainColor);
+  width: 0;
+  transform: translateX(-50%);
+  height: 5px;
+  top: -5px;
+  left: 50%;
+  transition: 0.2s;
+}
+.services .box:hover {
+  transform: translateY(-10px);
+}
+.services .box:hover::before {
+  width: 100%;
+}
+.services i {
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  color: #a3a3a3;
+}
+.services h3 {
+  text-align: center;
+  color: var(--mainColor);
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.services .info {
+  text-align: end;
+  padding: 10px;
+  position: relative;
+}
+.services .info::before {
+  content: "0" counter(services);
+  position: absolute;
+  background-color: var(--mainColor);
+  color: white;
+  width: 60px;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.services .info::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100%;
+  background-color: #c4c3c3;
+  bottom: 0;
+  left: 48px;
+  transform: skewX(-30deg);
+}
+.services .info a {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+.services {
+}
+.services {
+}
+.services {
+}
+/* end services */
 /* start animation */
 @keyframes right-move {
   50% {
