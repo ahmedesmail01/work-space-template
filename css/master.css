@@ -212,6 +212,20 @@ ul {
   transform: skewY(-6deg);
   transform-origin: top left;
 }
+@media (max-width: 767px) {
+  .landing::before {
+    background-image: url("../Ahmed.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: skewY(0deg);
+    background-color: #871ae0;
+    background-blend-mode: screen;
+  }
+  .landing .text h1 {
+    color: white;
+  }
+}
 .landing .container {
   min-height: calc(100vh - 72px);
   display: flex;
@@ -240,6 +254,7 @@ ul {
   .landing .text p {
     font-size: 18px;
     text-align: center;
+    color: white;
   }
 }
 
